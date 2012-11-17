@@ -40,16 +40,19 @@ class AbstractLexerTest extends \PHPUnit_Framework_TestCase
         $this->assertValue(3, $this->lexer->token);
     }
 
+    /**
+     * @expectedException \InvalidArgumentException
+     */
     public function testSkipUntilWithNonExistent()
     {
         $this->lexer->setInput('1 2 3');
-        $this->assertFalse($this->lexer->skipUntil(self::T_STRING));
+        $this->lexer->skipUntil(self::T_STRING);
     }
 
     public function testSkipUntil()
     {
         $this->lexer->setInput('1 "foo"');
-        $this->assertTrue($this->lexer->skipUntil(self::T_STRING));
+        $this->assertNull($this->lexer->skipUntil(self::T_STRING));
         $this->assertValue(1, $this->lexer->token);
         $this->assertValue('foo', $this->lexer->next);
     }

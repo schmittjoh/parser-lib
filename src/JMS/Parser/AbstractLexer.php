@@ -48,7 +48,7 @@ abstract class AbstractLexer
             }
         }
 
-        throw new \InvalidArgumentException('There is no token with value %s.', json_encode($type));
+        throw new \InvalidArgumentException(sprintf('There is no token with value %s.', json_encode($type)));
     }
 
     public function setInput($str)
@@ -97,7 +97,9 @@ abstract class AbstractLexer
     {
         while ( ! $this->isNext($type) && $this->moveNext());
 
-        return $this->isNext($type);
+        if ( ! $this->isNext($type)) {
+            throw new \RuntimeException(sprintf('Could not find the token %s.', $this->getName($type)));
+        }
     }
 
     /**
