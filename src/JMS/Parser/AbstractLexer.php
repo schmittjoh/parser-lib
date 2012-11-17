@@ -41,7 +41,7 @@ abstract class AbstractLexer
      */
     public function getName($type)
     {
-        $ref = new ReflectionClass($this);
+        $ref = new \ReflectionClass($this);
         foreach ($ref->getConstants() as $name => $value) {
             if ($value === $type) {
                 return $name;
