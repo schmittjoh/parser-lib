@@ -96,3 +96,15 @@ the lexer has split them::
 That's it. Now you can perform basic operations already. If you like you can now
 also replace the hard-coded integers in the lexer with the class constants of the
 parser.
+
+License
+-------
+
+The code is released under the business-friendly `Apache2 license`_.
+
+Documentation is subject to the `Attribution-NonCommercial-NoDerivs 3.0 Unported
+license`_.
+
+.. _Apache2 license: http://www.apache.org/licenses/LICENSE-2.0.html
+.. _Attribution-NonCommercial-NoDerivs 3.0 Unported license: http://creativecommons.org/licenses/by-nc-nd/3.0/
+
