@@ -72,7 +72,7 @@ abstract class AbstractParser
     protected function matchAny(array $types)
     {
         if ( ! $this->lexer->isNextAny($types)) {
-            $this->syntaxError('any of '.implode(', ', array_map(array($this->lexer, 'getName'), $types)));
+            $this->syntaxError('any of '.implode(' or ', array_map(array($this->lexer, 'getName'), $types)));
         }
 
         $this->lexer->moveNext();
@@ -93,6 +93,8 @@ abstract class AbstractParser
         }
         if (null === $actualToken) {
             $actualDesc = 'end of input';
+        } else if ($actualToken[1] === 0) {
+            $actualDesc = sprintf('"%s" of type %s at beginning of input', $actualToken[0], $this->lexer->getName($actualToken[2]));
         } else {
             $actualDesc = sprintf('"%s" of type %s at position %d (0-based)', $actualToken[0], $this->lexer->getName($actualToken[2]), $actualToken[1]);
         }
