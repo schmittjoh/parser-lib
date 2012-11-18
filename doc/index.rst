@@ -74,12 +74,10 @@ the lexer has split them::
             while ($this->lexer->isNextAny(array(self::T_PLUS, self::T_MINUS))) {
                 if ($this->lexer->isNext(self::T_PLUS)) {
                     $this->lexer->moveNext();
-
                     $result += $this->match(self::T_INT);
                 } else if ($this->lexer->isNext(self::T_MINUS)) {
                     $this->lexer->moveNext();
-
-                    $result -= $this->match(self::T_MINUS);
+                    $result -= $this->match(self::T_INT);
                 } else {
                     throw new \LogicException('Previous ifs were exhaustive.');
                 }
