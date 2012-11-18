@@ -27,8 +27,8 @@ abstract class AbstractLexer
 {
     public $token;
     public $next;
-    public $i;
 
+    private $i;
     private $peek;
     private $tokens;
 
