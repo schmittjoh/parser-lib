@@ -34,7 +34,7 @@ a convenient class for simple problems which we will use::
             |\s+
 
             # Operators; we support only + and -
-            |(+)|(-)
+            |(\+)|(-)
         /x', // The x modifier tells PCRE to ignore whitespace in the regex above.
 
         // This maps token types to a human readable name.
