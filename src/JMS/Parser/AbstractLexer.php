@@ -30,7 +30,7 @@ abstract class AbstractLexer
 
     private $i;
     private $peek;
-    private $tokens;
+    protected $tokens;
 
     /**
      * Returns the name of the given token.
