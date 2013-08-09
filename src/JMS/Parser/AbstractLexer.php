@@ -91,7 +91,7 @@ abstract class AbstractLexer
      *
      * @param integer $type
      *
-     * @return boolean true if a token of the passed type was found, false otherwise.
+     * @throws \RuntimeException When the token is not found
      */
     public function skipUntil($type)
     {
