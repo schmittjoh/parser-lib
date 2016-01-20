@@ -1,62 +1,68 @@
 {
-    "hash": "804f267fbd2c33067f6cafd3576f70dd",
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "032eee572fe874e78107018df44c0414",
+    "content-hash": "c8f62f2990a0b21b1c9a340ee41dfbbf",
     "packages": [
         {
             "name": "phpoption/phpoption",
-            "version": "0.9.0",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
-                "url": "git://github.com/schmittjoh/php-option",
-                "reference": "0.9.0"
+                "url": "https://github.com/schmittjoh/php-option.git",
+                "reference": "617bd84bf0d918da79b06ac6765b5390b83b1321"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/schmittjoh/php-option/archive/0.9.0.zip",
-                "reference": "0.9.0",
+                "url": "https://api.github.com/repos/schmittjoh/php-option/zipball/617bd84bf0d918da79b06ac6765b5390b83b1321",
+                "reference": "617bd84bf0d918da79b06ac6765b5390b83b1321",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.0"
             },
-            "require-dev": {
-                "phpunit/phpunit": "3.7.*"
-            },
-            "time": "2012-11-12 08:25:35",
             "type": "library",
-            "installation-source": "dist",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1-dev"
+                }
+            },
             "autoload": {
                 "psr-0": {
                     "PhpOption\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "Apache2"
             ],
             "authors": [
                 {
-                    "name": "Johannes M. Schmitt",
+                    "name": "Johannes Schmitt",
                     "email": "schmittjoh@gmail.com",
-                    "homepage": "http://jmsyst.com",
+                    "homepage": "https://github.com/schmittjoh",
                     "role": "Developer of wrapped JMSSerializerBundle"
                 }
             ],
             "description": "Option Type for PHP",
             "keywords": [
-                "php",
                 "language",
-                "type",
-                "option"
-            ]
+                "option",
+                "php",
+                "type"
+            ],
+            "time": "2013-01-19 11:01:32"
         }
     ],
-    "packages-dev": [
-
-    ],
-    "aliases": [
-
-    ],
+    "packages-dev": [],
+    "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [
-
-    ]
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": true,
+    "platform": [],
+    "platform-dev": []
 }
