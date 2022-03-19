@@ -53,7 +53,7 @@ abstract class AbstractLexer
 
     public function setInput($str)
     {
-        $tokens = preg_split($this->getRegex(), $str, null, PREG_SPLIT_DELIM_CAPTURE | PREG_SPLIT_NO_EMPTY | PREG_SPLIT_OFFSET_CAPTURE);
+        $tokens = preg_split($this->getRegex(), $str, -1, PREG_SPLIT_DELIM_CAPTURE | PREG_SPLIT_NO_EMPTY | PREG_SPLIT_OFFSET_CAPTURE);
 
         $this->tokens = array();
         foreach ($tokens as $token) {
